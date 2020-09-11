@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SkillsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_skills"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/list_item">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/pb_loading_skills"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_error_skills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_loading_data_from_server"
+        android:visibility="invisible" />
+
+</RelativeLayout>
